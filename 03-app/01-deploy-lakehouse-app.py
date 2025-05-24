@@ -34,7 +34,7 @@ def create_app(app_name, host, headers):
     url = host + "/api/2.0/apps"
     data = {
         "name": app_name,
-        "description": "lakehouse app"
+        "description": app_description
     }
     response = requests.post(url, headers=headers, json=data)
     return response.json()
@@ -126,3 +126,7 @@ def check_deployment_status(app_name, host, headers, deployment_id):
             print(f"Deployment of the app '{app_name}' in progress. Status: ", status.get("state") if status else "Unknown")
 
 check_deployment_status(app_name, host, headers, deployment_id)
+
+# COMMAND ----------
+
+
