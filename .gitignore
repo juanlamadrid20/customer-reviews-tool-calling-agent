@@ -8,3 +8,11 @@
 .env.production.local
 .databricks
 .venv
+
+# Python build artifacts
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+dist/
+build/
